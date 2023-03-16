@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku App</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li style="float:right"><a href="#">About</a></li>
+            <li><a href="#" id="generate-button">New</a></li>
+            <li><a href="#" id="clear-button">Clear</a></li>
+            <li  style="float:right; "><a href="#" id="solve-button">Solve</a></li>
+            <li  class="dropdown"><a href="javascript:void(0)" class="dropbtn">Difficulty</a>
+                <div class="dropdown-content">
+                    <a href="#" id="easy">Easy</a>
+                    <a href="#" id="medium">Medium</a>
+                    <a href="#" id="hard">Hard</a>
+                    <a href="#" id="insane">Insane</a>
+                </div>
+            </li>
+            <li class="dropdown" style="float:right; border-left:1px solid grey"><a href="javascript:void(0)">Check</a>
+                <div class="dropdown-content">
+                    <a href="#" id="enableCheck">Enabled</a>
+                    <a href="#" id="disableCheck">Disabled</a>
+                </div>
+            </li>
+            <li class="dropdown" style="float:right; border-left:1px solid grey"><a href="javascript:void(0)">Clock</a>
+                <div class="dropdown-content">
+                    <a href="#" id="clockEnable">Enabled</a>
+                    <a href="#" id="clockDisable">Disabled</a>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="sudoku-app">
+        <div id="puzzle" class="puzzle"></div>
+    </div>
+
+    <script type="module" defer src="scripts/app.js"></script>
+    <br>
+    <br>
+    
+</body>
+</html>
