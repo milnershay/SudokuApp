@@ -7,6 +7,7 @@ let timer = false;
 export function startStop() {
     let clockButton = document.querySelector('#startStop')
     if (!timer){
+        showClock()
         timer = true
         stopWatch()
         clockButton.classList.remove('paused')
@@ -66,7 +67,7 @@ export function stopWatch() {
         document.getElementById('h').innerHTML = hString
         document.getElementById('m').innerHTML = mString
         document.getElementById('s').innerHTML = sString
-        setTimeout(stopWatch, 6)
+        setTimeout(stopWatch, 5)
     }
 }
 

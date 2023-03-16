@@ -23,7 +23,9 @@ function main(){
     clockDisable.classList.add('active')
     checkDisable.classList.add('active')
     mediumButton.classList.add('active')
-    pausePlay.addEventListener('click', () => startStop())
+    pausePlay.addEventListener('click', () => {
+        startStop()
+    })
     clockEnable.addEventListener('click', () =>{
         clockEnable.classList.add('active')
         clockDisable.classList.remove('active')
