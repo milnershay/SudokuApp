@@ -123,5 +123,6 @@ export function checkDisabled(){
                 inputs[i].classList.remove('invalid')
             } 
         }
+        inputs[i].classList.remove('invalid')
     }
 }

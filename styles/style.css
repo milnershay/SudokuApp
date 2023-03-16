@@ -7,41 +7,17 @@ html{
 }
 
 
-
 .empty-el {
     color: #4848d4;
 }
 
-.intro {
-    margin: auto;
-    color: #04084d;
-    font-size: 35px;
-    margin: 30px 0px 10px 0px;
-}
 
-
-.instruction-1, .instruction-2, .description {
-    margin: auto;
-    font-size: 18px;
-    color: #084063;
-}
-
-
-
-.instruction-2 {
-    margin: 0px 0px 15px 0px;
-}
-
-.description {
-    margin: 0px 0px 15px 0px;
-}
-
-.decorator-elem {
-    font-weight: bold;
+.paused {
+    background-color: purple;
 }
 
 .suduko-app {
-    display: block;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -56,8 +32,10 @@ html{
 }
 
 .puzzle {
-    margin: auto;
-    margin-top: 9vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    display: block;
     width: 90vmin;
     height: 90vmin;
 
@@ -76,7 +54,6 @@ html{
     background-color: #88c1f9;
 }
 
-
  .odd-section {
     background: #b3b3b39b;
 }
@@ -84,26 +61,35 @@ html{
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0px;
     background-color: #333;
     position: fixed;
-    top: 0;
-    width: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100vi;
+    font-size: 1.7vw;
+    text-align: center;
 }
-
 
 li {
-    display: inline;
     float: left;
 }
+
 
 li a, .dropbtn {
     display: block;
     color: white;
-    text-align: center;
     padding: 14px 16px;
+    width: auto;
+    height: auto;
+    text-align: center;
     text-decoration: none;
     border-right: 1px solid grey;
+}
+
+li:last-child {
+    border-right: none;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
@@ -119,14 +105,13 @@ li.dropdown {
     display: none;
     position: absolute;
     background-color: grey;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    min-width: 6vmin;
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
 .dropdown-content a{
     color: white;
-    padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -141,9 +126,31 @@ li.dropdown {
     display: block;
 }
 
+img{
+    max-width: 100%;
+    max-height: 100%;
+    width: 1.8vw;
+    object-fit: contain;
+
+}
 
 .active {
     background-color: #04aa6d;
+}
+
+
+.digit {
+    font-size: 3vw;
+    color: pink;
+}
+
+.txt {
+    font-size: 2vw;
+    color: pink;
+}
+
+.hidden{
+    display: none;
 }
 
 

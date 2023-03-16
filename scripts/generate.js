@@ -46,7 +46,6 @@ function generateSudokuBoard(cellsToRemove) {
     for (let i = 0; i< cellsToRemove; i++){
         let row = Math.floor(Math.random() * 9)
         let col = Math.floor(Math.random() * 9)
-        console.log(row, col)
         if (board[row][col] = 0){
             cellsToRemove++
         }else{

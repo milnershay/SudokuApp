@@ -1,6 +1,7 @@
 import { clearBoard, drawBoard } from "./draw.js";
 import { solve, insertValues, populateValues, checkEnabled, checkDisabled } from './solver.js'
 import { Easy, Medium, Hard, Insane, loadBoard} from "./generate.js";
+import { hideClock, resetClock, showClock, startStop } from "./clock.js";
 
 const solveButton = document.querySelector("#solve-button")
 const clearButton = document.querySelector("#clear-button")
@@ -13,13 +14,26 @@ const checkEnable = document.querySelector('#enableCheck')
 const checkDisable = document.querySelector('#disableCheck')
 const clockEnable = document.querySelector('#clockEnable')
 const clockDisable = document.querySelector('#clockDisable')
+const pausePlay = document.querySelector('#startStop')
 
 function main(){
     drawBoard()
     checkDisabled()
-
+    hideClock()
+    clockDisable.classList.add('active')
     checkDisable.classList.add('active')
     mediumButton.classList.add('active')
+    pausePlay.addEventListener('click', () => startStop())
+    clockEnable.addEventListener('click', () =>{
+        clockEnable.classList.add('active')
+        clockDisable.classList.remove('active')
+        showClock()
+    })
+    clockDisable.addEventListener('click', ()=> {
+        clockDisable.classList.add('active')
+        clockEnable.classList.remove('active')
+        hideClock()
+    })
     solveButton.addEventListener('click', () => {
         insertValues(true)
         if(solve()) {
@@ -38,8 +52,15 @@ function main(){
         checkDisable.classList.add('active')
         checkDisabled()
     })
-    clearButton.addEventListener('click', () => clearBoard())
-    generateButton.addEventListener('click', () => loadBoard() )
+    clearButton.addEventListener('click', () => {
+        clearBoard()
+        resetClock()
+    })
+    generateButton.addEventListener('click', () => {
+        loadBoard()
+        resetClock()
+        startStop()
+    })
     easyButton.addEventListener('click', () => {
         Easy()
         easyButton.classList.add('active')
