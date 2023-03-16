@@ -1,7 +1,6 @@
 let h = 0;
 let m = 0;
 let s = 0;
-let count = 0;
 let timer = false;
 
 export function startStop() {
@@ -22,7 +21,6 @@ export function resetClock() {
     h = 0
     m = 0
     s = 0
-    count = 0
     document.getElementById('h').innerHTML = "00"
     document.getElementById('m').innerHTML = "00"
     document.getElementById('s').innerHTML = "00"
@@ -31,12 +29,7 @@ export function resetClock() {
 
 export function stopWatch() {
     if (timer) {
-        count++
-
-        if (count == 100){
-            s++
-            count = 0
-        }
+        s++
 
         if (s == 60){
             m++
@@ -67,7 +60,7 @@ export function stopWatch() {
         document.getElementById('h').innerHTML = hString
         document.getElementById('m').innerHTML = mString
         document.getElementById('s').innerHTML = sString
-        setTimeout(stopWatch, 5)
+        setTimeout(stopWatch, 990)
     }
 }
 
