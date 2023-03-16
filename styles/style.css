@@ -44,7 +44,7 @@ html{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 100%;
     padding: 10px;
 }
 
@@ -57,15 +57,17 @@ html{
 
 .puzzle {
     margin: auto;
-    width: 600px;
-    height: 600px;
+    margin-top: 9vw;
+    width: 90vw;
+    height: 90vw;
+
 }
 
 .puzzle input {
     text-align: center;
     font-size: 30px;
-    width: 60px;
-    height: 60px;
+    width: 9vw;
+    height: 9vw;
     border: 1px #000000 solid;
     margin: 0;
 }
