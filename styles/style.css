@@ -58,16 +58,16 @@ html{
 .puzzle {
     margin: auto;
     margin-top: 9vw;
-    width: 90vw;
-    height: 90vw;
+    width: 90vmin;
+    height: 90vmin;
 
 }
 
 .puzzle input {
     text-align: center;
     font-size: 30px;
-    width: 9vw;
-    height: 9vw;
+    width: 9vmin;
+    height: 9vmin;
     border: 1px #000000 solid;
     margin: 0;
 }
