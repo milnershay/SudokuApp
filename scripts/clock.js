@@ -2,12 +2,13 @@ let h = 0;
 let m = 0;
 let s = 0;
 let timer = false;
+let timeout;
 
 export function startStop() {
     let clockButton = document.querySelector('#startStop')
     if (!timer){
-        showClock()
         timer = true
+        clearTimeout(timeout)
         stopWatch()
         clockButton.classList.remove('paused')
     } else{
@@ -29,7 +30,6 @@ export function resetClock() {
 
 export function stopWatch() {
     if (timer) {
-        s++
 
         if (s == 60){
             m++
@@ -60,7 +60,8 @@ export function stopWatch() {
         document.getElementById('h').innerHTML = hString
         document.getElementById('m').innerHTML = mString
         document.getElementById('s').innerHTML = sString
-        setTimeout(stopWatch, 990)
+        s++
+        timeout = setTimeout(stopWatch, 990)
     }
 }
 
@@ -70,5 +71,4 @@ export function hideClock(){
 
 export function showClock(){
     document.getElementById('time').classList.remove('hidden')
-
 }

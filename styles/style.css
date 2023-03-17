@@ -34,7 +34,7 @@ html{
 .puzzle {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 60px;
+    margin-top: 10vmin;
     display: block;
     width: 90vmin;
     height: 90vmin;
@@ -43,7 +43,7 @@ html{
 
 .puzzle input {
     text-align: center;
-    font-size: 30px;
+    font-size: 6vmin;
     width: 9vmin;
     height: 9vmin;
     border: 1px #000000 solid;

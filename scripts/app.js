@@ -5,7 +5,7 @@ import { hideClock, resetClock, showClock, startStop } from "./clock.js";
 
 const solveButton = document.querySelector("#solve-button")
 const clearButton = document.querySelector("#clear-button")
-const generateButton = document.querySelector('#generate-button')
+const newButton = document.querySelector('#generate-button')
 const easyButton = document.querySelector('#easy')
 const mediumButton = document.querySelector('#medium')
 const hardButton = document.querySelector('#hard')
@@ -58,7 +58,7 @@ function main(){
         clearBoard()
         resetClock()
     })
-    generateButton.addEventListener('click', () => {
+    newButton.addEventListener('click', () => {
         loadBoard()
         resetClock()
         startStop()
