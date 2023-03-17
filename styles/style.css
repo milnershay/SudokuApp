@@ -32,6 +32,8 @@ html{
 }
 
 .puzzle {
+    max-width: 90vw;
+    max-height: 90vw;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10vmin;
@@ -44,6 +46,8 @@ html{
 .puzzle input {
     text-align: center;
     font-size: 6vmin;
+    max-width: 8vw;
+    max-height: 9%;
     width: 9vmin;
     height: 9vmin;
     border: 1px #000000 solid;
@@ -67,8 +71,8 @@ ul {
     top: 0px;
     left: 0px;
     right: 0px;
-    width: 100vi;
-    font-size: 1.7vw;
+    width: 100vw;
+    font-size: 1.3vw;
     text-align: center;
 }
 
@@ -80,7 +84,7 @@ li {
 li a, .dropbtn {
     display: block;
     color: white;
-    padding: 14px 16px;
+    padding: 1.5vw 2vw;
     width: auto;
     height: auto;
     text-align: center;
