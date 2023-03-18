@@ -92,7 +92,11 @@ export function checkEnabled(){
     for (let i = 0; i < 81; ++i) {
         inputs[i].onchange = function(){
             if (inputs[i].value < 1 || inputs[i].value > 9 || isNaN(inputs[i].value)){
-                inputs[i].value = ""
+                if (inputs[i].value = "Gili"){
+                    inputs[i].value = "♥"
+                }else{
+                    inputs[i].value = ""
+                }
                 inputs[i].classList.remove('valid')
                 inputs[i].classList.remove('invalid')
             } else{
@@ -118,7 +122,11 @@ export function checkDisabled(){
     for (let i = 0; i < 81; ++i) {
         inputs[i].onchange = function(){
             if (inputs[i].value < 1 || inputs[i].value > 9 || isNaN(inputs[i].value)){
-                inputs[i].value = ""
+                if (inputs[i].value = "Gili"){
+                    inputs[i].value = "♥"
+                }else{
+                    inputs[i].value = ""
+                }
                 inputs[i].classList.remove('valid')
                 inputs[i].classList.remove('invalid')
             } 
