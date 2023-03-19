@@ -32,6 +32,6 @@ export function clearBoard() {
         inputs[i].classList.remove('empty-el')
         inputs[i].classList.remove('valid')
         inputs[i].classList.remove('invalid')
-        inputs[i].disabled = false
+        inputs[i].disabled = true
     }
 }
