@@ -3,6 +3,7 @@ import numpy as np
 import cv2
 import imutils
 from sklearn.neighbors import KNeighborsClassifier
+import tensorflow as tf
 
 
 def find_cont(image):
@@ -28,6 +29,8 @@ def get_board(img, conts):
     result = cv2.warpPerspective(img, matrix, (900,900))
     result = cv2.rotate(result, cv2.ROTATE_90_CLOCKWISE)
     return result
+
+
 
 
 cv2.namedWindow("norm", cv2.WINDOW_NORMAL)
