@@ -32,8 +32,7 @@ html{
 }
 
 .puzzle {
-    max-width: 90vw;
-    max-height: 90vw;
+
     margin-left: auto;
     margin-right: auto;
     margin-top: 10vh;
@@ -45,11 +44,9 @@ html{
 
 .puzzle input {
     text-align: center;
-    font-size: 6vmin;
-    max-width: 8vw;
-    max-height: 9%;
-    width: 9vmin;
-    height: 9vmin;
+    font-size: 5vmin;
+    max-width: 9vmin;
+    max-height: 9vmin;
     border: 1px #000000 solid;
     margin: 0;
 }
@@ -159,9 +156,18 @@ img{
     display: none;
 }
 
+@supports (-webkit-touch-callout: none) {
+    .puzzle input {
+        text-align: center;
+        font-size: 6vmin;
+        width: 6vmin;
+        height: 6vmin;
+        border: 1px #000000 solid;
+        margin: 0;
+    }
 
-
-
-
-
-
+    ul{
+        width: 100vw;
+        font-size: 2vw;
+    }
+}
