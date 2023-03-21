@@ -7,6 +7,11 @@ html{
 }
 
 
+.caption {
+    width: auto;
+    height: auto;
+}
+
 .empty-el {
     color: #4848d4;
 }
@@ -255,3 +260,4 @@ img{
         top: 5vh;
     }
 }
+

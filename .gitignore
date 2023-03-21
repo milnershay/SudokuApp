@@ -50,3 +50,6 @@ test data/IMG_0890
 test data/IMG_0890.HEIC
 test data/IMG_0891
 test data/IMG_0891.HEIC
+knn_model.pkl
+Data/respones.data
+Data/samples.data
