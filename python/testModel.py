@@ -8,6 +8,7 @@ from sklearn.neighbors import KNeighborsClassifier
 import tensorflow as tf
 from keras.models import Sequential
 from keras.layers import Dense
+from sklearn_porter import Porter
 
 
 def find_cont(image):
@@ -35,17 +36,16 @@ def get_board(img, conts):
     return result
 
 
-def create_knn_model():
-    input_layer = tf.keras.layers.Input(shape=samples.shape)
-
-
 cv2.namedWindow("norm", cv2.WINDOW_NORMAL)
 samples = np.loadtxt('samples.data', np.float32)
 responses = np.loadtxt('respones.data', np.float32)
 model = KNeighborsClassifier()
 model.fit(samples, responses)
 
-pickle.dump(model, open('knn_model.pkl', 'wb'))
+porter = Porter(model, language='js')
+output = porter.export(embed_data=True)
+with open('knn_model.js', 'wb') as f:
+    pickle.dump(output, f   )
 
 img = cv2.imread('test data\img_0880.heic')
 conts, _ = find_cont(img)
