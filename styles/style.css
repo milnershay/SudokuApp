@@ -6,6 +6,10 @@ html{
     text-align: center;
 }
 
+.picture {
+    display: none;
+}
+
 
 .caption {
     width: auto;

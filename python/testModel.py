@@ -14,7 +14,6 @@ from sklearn_porter import Porter
 def find_cont(image):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     bfilter = cv2.bilateralFilter(gray, 13, 20, 20)
-    edged = cv2.Canny(bfilter, 30, 180)
     blur = cv2.GaussianBlur(bfilter, (9, 9), 9)
     thresh = cv2.adaptiveThreshold(blur, 255, 1, 1, 11, 2)
     contours, hierarchy = cv2.findContours(thresh, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
@@ -37,8 +36,8 @@ def get_board(img, conts):
 
 
 cv2.namedWindow("norm", cv2.WINDOW_NORMAL)
-samples = np.loadtxt('samples.data', np.float32)
-responses = np.loadtxt('respones.data', np.float32)
+samples = np.loadtxt('Data/samples.data', np.float32)
+responses = np.loadtxt('Data/respones.data', np.float32)
 model = KNeighborsClassifier()
 model.fit(samples, responses)
 
@@ -61,6 +60,7 @@ for cnt in conts:
             roismall = cv2.resize(roi, (10, 10))
             roismall = roismall.reshape((1, 100))
             roismall = np.float32(roismall)
+            print(roismall)
             num = model.predict(roismall)
             n_string = str(int(num))
             cv2.putText(board, n_string, (x, y + h), 2, 2, (0, 0, 0))

@@ -15,6 +15,7 @@ const checkDisable = document.querySelector('#disableCheck')
 const clockEnable = document.querySelector('#clockEnable')
 const clockDisable = document.querySelector('#clockDisable')
 const pausePlay = document.querySelector('#startStop')
+const scanButton = document.querySelector('#scanButton')
 
 function main(){
     drawBoard()
@@ -23,6 +24,9 @@ function main(){
     clockDisable.classList.add('active')
     checkDisable.classList.add('active')
     mediumButton.classList.add('active')
+    scanButton.onclick = function () {
+        location.href = 'test.html'
+    }
     pausePlay.addEventListener('click', () => {
         startStop()
     })
